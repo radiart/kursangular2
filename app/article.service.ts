@@ -6,6 +6,6 @@ import { Injectable} from 'angular2/core';
 export class ArticleService {
 
     getArticles() {
-        return ARTICLES;
+        return Promise.resolve( ARTICLES );
     }
 }

@@ -20,7 +20,8 @@ export class AppComponent implements OnInit {
     ){}
 
     getArticles(){
-        this.articles = this._articleService.getArticles();
+        this._articleService.getArticles()
+            .then( articles => this.articles = articles )
     }
 
     ngOnInit(){
