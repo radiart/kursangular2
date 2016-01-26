@@ -1,27 +1,28 @@
 import {Component} from 'angular2/core';
 import {NgFor} from 'angular2/common';
+import {Article} from './article';
+import {ArticleComponent} from './article.component';
+
 
 @Component({
     selector: 'articles',
-    template: `
-        <ul>
-            <li *ngFor = " #day of days ">{{ day }}</li>
-        </ul>
-    `
+    templateUrl: 'app/app.component.html',
+    directives: [ArticleComponent]
 })
 
 export class AppComponent {
-    days: string[];
 
-    constructor() {
-        this.days = [
-            'Sunday' ,
-            'Monday',
-            'Tuesday',
-            'Wednesday',
-            'Thursday',
-            'Friday',
-            'Saturday'
-        ];
-    }
 }
+
+var ARTICLES : Article[] = [
+    new Article(
+        'Title',
+        'Desc',
+        'http://link.com'
+    ),
+    new Article(
+        'Title 2',
+        'Desc 2',
+        'http://link 2.com'
+    )
+]
