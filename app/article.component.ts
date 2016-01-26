@@ -3,6 +3,7 @@ import {Article} from './article';
 
 @Component({
     selector: 'single-article',
+    inputs: ['article'],
     templateUrl: 'app/article.component.html'
 })
 
