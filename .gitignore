@@ -1,0 +1,8 @@
+# Files added here won't be tracked.
+app/*.js
+.tmp/
+.idea/
+dist
+node_modules/
+test-reports
+npm-debug.log
